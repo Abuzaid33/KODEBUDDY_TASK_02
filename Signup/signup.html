@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title of the page -->
+  <title>Glassmorphism Signup Form | CodingNepal</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container for the form -->
+  <div class="wrapper">
+    <!-- Form for signing up -->
+    <form id="signupForm" action="#">
+      <!-- Title of the form -->
+      <h2>Sign Up</h2>
+      <!-- Input field for username -->
+      <div class="input-field">
+        <input type="text" id="username" required>
+        <label for="username">Enter your username</label>
+        <span class="guidance" id="usernameGuidance">Username must be alphanumeric and at least 6 characters long.</span>
+      </div>
+      <!-- Input field for email -->
+      <div class="input-field">
+        <input type="email" id="email" required>
+        <label for="email">Enter your email</label>
+        <span class="guidance" id="emailGuidance">Email should be in required format (e.g., xyz@gmail.com).</span>
+      </div>
+      <!-- Input field for password -->
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label for="password">Enter your password</label>
+        <span class="guidance" id="passwordGuidance">Password must be 8 characters long and include uppercase letters, lowercase letters, numbers, and symbols.</span>
+      </div>
+      <!-- Submit button for the form -->
+      <button type="submit" id="submitButton" disabled>Sign Up</button>
+      <!-- Link to log in page -->
+      <div class="login">
+        <p>Already have an account? <a href="#">Log In</a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

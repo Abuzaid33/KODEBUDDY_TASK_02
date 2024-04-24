@@ -1,0 +1,168 @@
+/* Importing the Open Sans font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* Resetting default margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; /* Applying the Open Sans font to all elements */
+}
+
+/* Styling for the body */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px; /* Adding padding to the body */
+}
+
+/* Styling for the body's background image */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.codingnepalweb.com/demos/create-glassmorphism-login-form-html-css/hero-bg.jpg"), #000; /* Background image and fallback color */
+  background-position: center;
+  background-size: cover;
+}
+
+/* Styling for the wrapper containing the form */
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px; /* Adding padding inside the wrapper */
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Border styling */
+  backdrop-filter: blur(9px); /* Applying a backdrop filter for glassmorphism effect */
+  -webkit-backdrop-filter: blur(9px); /* Vendor prefix for older browsers */
+}
+
+/* Styling for the form */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling for the heading */
+h2 {
+  font-size: 2rem; /* Setting the font size for the heading */
+  margin-bottom: 20px; /* Adding margin at the bottom of the heading */
+  color: #fff; /* Setting text color to white */
+}
+
+/* Styling for input fields */
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc; /* Styling the bottom border of input fields */
+  margin: 15px 0; /* Adding margin to input fields */
+}
+
+/* Styling for input field labels */
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff; /* Setting text color to white */
+  font-size: 16px; /* Setting font size for labels */
+  pointer-events: none;
+  transition: 0.15s ease; /* Adding transition effect */
+}
+
+/* Styling for input fields */
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent; /* Making input field background transparent */
+  border: none; /* Removing default border */
+  outline: none; /* Removing outline */
+  font-size: 16px; /* Setting font size for inputs */
+  color: #fff; /* Setting text color to white */
+}
+
+/* Styling for input field labels when focused or with valid input */
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  font-size: 0.8rem; /* Reducing font size for labels */
+  top: 10px; /* Adjusting position of labels */
+  transform: translateY(-120%); /* Moving labels up */
+}
+
+/* Styling for the forget section */
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligning items with space between */
+  margin: 25px 0 35px 0; /* Adding margin */
+  color: #fff; /* Setting text color to white */
+}
+
+/* Styling for the remember checkbox */
+#remember {
+  accent-color: #fff; /* Setting accent color */
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label p {
+  margin-left: 8px; /* Adding margin to the left of text */
+}
+
+/* Styling for links */
+.wrapper a {
+  color: #efefef; /* Setting link color */
+  text-decoration: none; /* Removing underline */
+}
+
+/* Styling for link hover state */
+.wrapper a:hover {
+  text-decoration: underline; /* Adding underline on hover */
+}
+
+/* Styling for the button */
+button {
+  background: #fff; /* Setting background color */
+  color: #000; /* Setting text color */
+  font-weight: 600; /* Setting font weight */
+  border: none; /* Removing border */
+  padding: 12px 20px; /* Adding padding */
+  cursor: pointer; /* Setting cursor to pointer */
+  border-radius: 3px; /* Adding border radius */
+  font-size: 16px; /* Setting font size */
+  border: 2px solid transparent; /* Adding border */
+  transition: 0.3s ease; /* Adding transition effect */
+}
+
+/* Styling for button hover state */
+button:hover {
+  color: #fff; /* Changing text color on hover */
+  border-color: #fff; /* Changing border color on hover */
+  background: rgba(255, 255, 255, 0.15); /* Adding background color on hover */
+}
+
+/* Styling for the register section */
+.register {
+  text-align: center; /* Aligning text to center */
+  margin-top: 30px; /* Adding margin at the top */
+  color: #fff; /* Setting text color to white */
+}
+
+/* Styling for guidance messages */
+.guidance {
+  font-size: 0.8rem; /* Setting font size */
+  color: #ccc; /* Setting text color */
+  margin-top: 5px; /* Adding margin at the top */
+  display: none; /* Hiding by default */
+}
+
+/* Styling for guidance messages when input field is focused */
+.input-field:focus-within .guidance {
+  display: block; /* Displaying guidance message when input field is focused */
+}
